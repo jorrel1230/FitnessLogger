@@ -25,19 +25,10 @@ connection.once('open', () => {
 });
 
 
-
 // API Endpoints
 const userRouter = require('./routes/users');
-
 app.use('/users', userRouter);
 
-
-
-
-
-app.post('/register', (req, res) => {
-    console.log(req.body.password);
-});
 
 app.listen(port, () => {
     console.log(`Server Running on ${port}!`);

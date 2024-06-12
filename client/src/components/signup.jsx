@@ -16,7 +16,7 @@ const Signup = () => {
         console.log(email);
         console.log(password);
 
-        axios.post("http://localhost:5000/register", {name, email, password})
+        axios.post("http://localhost:5000/users/register", {name, email, password})
             .then(result => {
                 console.log(result);
                 navigate("/login")
