@@ -2,6 +2,8 @@ import React from 'react';
 import UserSession from '../utils/userSession';
 import { useNavigate } from 'react-router-dom';
 
+import UserDashboard from './userdashboard';
+
 const Home = () => {
     const id = UserSession.getId();
     const navigate = useNavigate();
@@ -12,11 +14,19 @@ const Home = () => {
 
     return(
         <div>
+            <button 
+                className='float-right' 
+                type="button" 
+                onClick={() => {
+                    UserSession.setId('');
+                    navigate("/login");
+                }}>
+                    Log Out.
+            </button>
+
             <p>Home Component!</p>
-            <button type="button" onClick={() => {
-                UserSession.setId('');
-                navigate("/login");
-            }}>Log Out.</button>
+
+            <UserDashboard/>
         </div>
     );
 };
