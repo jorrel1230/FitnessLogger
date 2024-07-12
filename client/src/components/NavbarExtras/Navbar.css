@@ -1,0 +1,41 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2E3944;
+    color: #D3D9D4;
+    font-family: dosis;
+}
+
+p {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 40px;
+}
+  
+li {
+    float: left;
+    line-height: 65px;
+}
+  
+li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+  
+  /* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #212A31;
+    color: #748D92;
+    font-family: dosis;
+    font-weight: 600;
+}
